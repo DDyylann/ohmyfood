@@ -1,0 +1,30 @@
+@use 'variables';
+
+.footer {
+    background-color: variables.$color-grey;
+    padding: 28px 24px;
+
+    &__logo {
+        height: 20px;
+        filter: brightness(0) invert(1);
+        margin-bottom: 24px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: variables.$color-white-pure;
+        font-size: 16px;
+    }
+
+    &__icon {
+        color: variables.$color-white-pure;
+    }
+}

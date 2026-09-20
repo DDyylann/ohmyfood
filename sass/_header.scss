@@ -1,0 +1,31 @@
+@use 'variables';
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: variables.$color-grey-card;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+
+    &__logo {
+        height: 30px;
+    }
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 0;
+    background-color: variables.$color-grey-light;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    font-weight: 500;
+    color: variables.$color-grey;
+
+    &__icon {
+        color: variables.$color-grey;
+    }
+}

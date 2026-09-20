@@ -1,0 +1,26 @@
+@use 'variables';
+
+.btn-primary {
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, variables.$color-secondary 0%, variables.$color-primary 100%);
+    color: variables.$color-white-pure;
+    font-family: variables.$font-text;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+        filter: brightness(1.1);
+    }
+}
+
+.intro__button {
+    width: 218px;
+}
+
+.menu__button {
+    width: 186px;
+}

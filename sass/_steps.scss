@@ -1,0 +1,57 @@
+@use 'variables';
+
+.how-it-works {
+    padding: 40px 24px;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        color: variables.$color-black;
+        margin-bottom: 24px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+.step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 72px;
+    gap: 25px;
+    padding: 16px 24px;
+    background-color: variables.$color-grey-card;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+    &__number {
+        position: absolute;
+        left: -8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: variables.$color-primary;
+        color: variables.$color-white-pure;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &__icon {
+        color: variables.$color-grey-tint;
+        font-size: 20px;
+        margin-left: 16px;
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: 500;
+        color: variables.$color-black;
+    }
+}

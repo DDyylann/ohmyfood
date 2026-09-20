@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.btn-primary {
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #FF79DA 0%, #9356DC 100%);
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.intro__button {
+  width: 218px;
+}
+
+.menu__button {
+  width: 186px;
+}
+
+.how-it-works {
+  padding: 40px 24px;
+}
+.how-it-works__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 24px;
+}
+.how-it-works__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 72px;
+  gap: 25px;
+  padding: 16px 24px;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.step__number {
+  position: absolute;
+  left: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+}
+.step__icon {
+  color: #7E7E7E;
+  font-size: 20px;
+  margin-left: 16px;
+}
+.step__text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #F6F6F6;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+.header__logo {
+  height: 30px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 0;
+  background-color: #EAEAEA;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  font-weight: 500;
+  color: #353535;
+}
+.location__icon {
+  color: #353535;
+}
+
+.footer {
+  background-color: #353535;
+  padding: 28px 24px;
+}
+.footer__logo {
+  height: 20px;
+  filter: brightness(0) invert(1);
+  margin-bottom: 24px;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.footer__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+.footer__icon {
+  color: #FFFFFF;
+}
+
+.intro {
+  text-align: center;
+  padding: 40px 24px;
+  background-color: #EAEAEA;
+}
+.intro__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 16px;
+}
+.intro__description {
+  font-size: 18px;
+  color: #353535;
+  margin-bottom: 24px;
+}
+
+.restaurants {
+  padding: 40px 24px;
+  background-color: #F6F6F6;
+}
+.restaurants__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 24px;
+}
+.restaurants__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.restaurant-card {
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.restaurant-card__image-wrapper {
+  position: relative;
+}
+.restaurant-card__image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.restaurant-card__badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background-color: #99E2D0;
+  color: #008766;
+  font-size: 12px;
+  font-weight: 700;
+}
+.restaurant-card__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #FFFFFF;
+}
+.restaurant-card__name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+.restaurant-card__location {
+  font-size: 14px;
+  font-weight: 300;
+  color: #7E7E7E;
+}
+.restaurant-card__heart {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+  color: #000000;
+}
+.restaurant-card__heart-outline, .restaurant-card__heart-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.restaurant-card__heart-fill {
+  color: #9356DC;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
