@@ -1,7 +1,10 @@
 @use 'variables';
 
 .how-it-works {
-    padding: 40px 24px;
+    padding: 40px 30px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
 
     &__title {
         font-size: 24px;
@@ -13,7 +16,12 @@
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 25px;
+
+        @media (min-width: variables.$breakpoint-desktop) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
     }
 }
 
@@ -27,6 +35,10 @@
     background-color: variables.$color-grey-card;
     border-radius: 20px;
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+    @media (min-width: variables.$breakpoint-desktop) {
+        flex: 0 1 400px;
+    }
 
     &__number {
         position: absolute;
@@ -47,11 +59,22 @@
         color: variables.$color-grey-tint;
         font-size: 20px;
         margin-left: 16px;
+        transition: color 0.3s ease;
     }
 
     &__text {
         font-size: 16px;
         font-weight: 500;
         color: variables.$color-black;
+    }
+
+    @media (hover: hover) {
+        &:hover &__icon {
+            color: variables.$color-primary;
+        }
+    }
+
+    &:active &__icon {
+        color: variables.$color-primary;
     }
 }

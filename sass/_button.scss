@@ -4,16 +4,23 @@
     height: 50px;
     border: none;
     border-radius: 30px;
-    background: linear-gradient(135deg, variables.$color-secondary 0%, variables.$color-primary 100%);
+    background: linear-gradient(175deg, variables.$color-secondary 0%, variables.$color-primary 150%);
     color: variables.$color-white-pure;
     font-family: variables.$font-text;
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease, filter 0.3s ease;
 
     &:hover {
         filter: brightness(1.1);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+    }
+
+    &:active {
+        filter: brightness(0.95);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     }
 }
 

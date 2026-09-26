@@ -2,15 +2,22 @@
 
 .intro {
     text-align: center;
-    padding: 40px 24px;
-    background-color: variables.$color-grey-light;
+    padding: 40px 24px 60px;
+    background-color: variables.$color-grey-lightt;
 
     &__title {
         font-family: variables.$font-text;
         font-weight: 700;
         font-size: 24px;
         color: variables.$color-black;
-        margin-bottom: 16px;
+        max-width: 280px;
+        margin: 0 auto 16px;
+
+        @media (min-width: variables.$breakpoint-desktop) {
+        font-size: 40px;
+        max-width: none;
+        }
+
     }
 
     &__description {
