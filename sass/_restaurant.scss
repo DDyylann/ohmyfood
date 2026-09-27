@@ -1,35 +1,35 @@
 @use 'variables';
 
 .restaurants {
-    padding: 50px 24px 70px;
+    padding: 3.125rem 1.5rem 4.375rem;
     background-color: variables.$color-grey-card;
 
     &__title {
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 700;
         color: variables.$color-black;
-        margin-bottom: 24px;
+        margin-bottom: 1.5rem;
     }
 
     &__cards {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 1.5rem;
 
         @media (min-width: variables.$breakpoint-desktop) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 100px;
-        row-gap: 50px;
+        column-gap: 6.25rem;
+        row-gap: 3.125rem;
     }
     }
 }
 
 .restaurant-card {
     display: block;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     overflow: hidden;
-    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.15);
 
 
     &__image-wrapper {
@@ -38,23 +38,23 @@
 
     &__image {
         width: 100%;
-        height: 180px;
+        height: 11.25rem;
         object-fit: cover;
 
         @media (min-width: variables.$breakpoint-desktop) {
-        height: 250px;
+        height: 15.625rem;
         }
     }
 
     &__badge {
         position: absolute;
-        top: 16px;
-        right: 16px;
-        padding: 4px 12px;
-        border-radius: 4px;
+        top: 1rem;
+        right: 1rem;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.25rem;
         background-color: variables.$color-tertiary;
         color: variables.$color-green-font;
-        font-size: 12px;
+        font-size: 0.75rem;
         font-weight: 700;
     }
 
@@ -62,31 +62,34 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 16px;
+        padding: 1rem;
         background-color: variables.$color-white-pure;
 
         @media (min-width: variables.$breakpoint-desktop) {
-        height: 80px;
+        height: 5rem;
         }
     }
 
     &__name {
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 700;
         color: variables.$color-black;
     }
 
     &__location {
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 300;
         color: variables.$color-grey-tint;
     }
 
     &__heart {
         position: relative;
-        width: 24px;
-        height: 24px;
-        font-size: 20px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1.25rem;
         color: variables.$color-black;
 
         @media (min-width: variables.$breakpoint-desktop) {

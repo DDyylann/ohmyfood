@@ -1,33 +1,33 @@
 @use 'variables';
 
 .btn-primary {
-    height: 50px;
+    height: 3.125rem;
     border: none;
-    border-radius: 30px;
+    border-radius: 1.875rem;
     background: linear-gradient(175deg, variables.$color-secondary 0%, variables.$color-primary 150%);
     color: variables.$color-white-pure;
     font-family: variables.$font-text;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.25);
     transition: box-shadow 0.3s ease, filter 0.3s ease;
 
     &:hover {
         filter: brightness(1.1);
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0.375rem 0.875rem rgba(0, 0, 0, 0.35);
     }
 
     &:active {
         filter: brightness(0.95);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.25);
     }
 }
 
 .intro__button {
-    width: 218px;
+    width: 13.625rem;
 }
 
 .menu__button {
-    width: 186px;
+    width: 11.625rem;
 }

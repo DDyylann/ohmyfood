@@ -1,0 +1,208 @@
+@use 'variables';
+
+// Header adapté aux pages restaurant : flèche retour + logo centré
+.header--menu {
+    position: relative;
+    justify-content: center;
+
+    .header__back {
+        position: absolute;
+        left: 1.5rem;
+        color: variables.$color-black;
+        font-size: 1.25rem;
+    }
+}
+
+.menu-page {
+    &__hero {
+        height: 15.625rem;
+        overflow: hidden;
+
+        @media (min-width: variables.$breakpoint-desktop) {
+            height: 23.75rem;
+        }
+    }
+
+    &__hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.menu-card {
+    position: relative;
+    margin-top: -1.25rem;
+    padding: 1.5rem 0.625rem 2.5rem;
+    background-color: variables.$color-white;
+    border-radius: 1.875rem;
+
+    @media (min-width: variables.$breakpoint-desktop) {
+        max-width: 81.25rem;
+        margin: -3.75rem auto 0;
+        padding: 2.5rem 9.375rem 3.75rem;
+        border-radius: 2.5rem 2.5rem 0 0;
+        box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &__title-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+
+        @media (min-width: variables.$breakpoint-desktop) {
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        font-family: variables.$font-title;
+        font-size: 1.75rem;
+        font-weight: 400;
+        color: variables.$color-black;
+
+        @media (min-width: variables.$breakpoint-desktop) {
+            font-size: 1.25rem;
+        }
+    }
+
+    &__heart {
+        position: relative;
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1.5625rem;
+        color: variables.$color-black;
+
+        @media (hover: hover) {
+            &:hover .menu-card__heart-fill {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        &:active .menu-card__heart-fill {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    &__heart-outline,
+    &__heart-fill {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__heart-fill {
+        color: variables.$color-primary;
+        opacity: 0;
+        transform: scale(0.3);
+        transition: opacity 0.25s ease, transform 0.45s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+}
+
+.menu-category {
+    margin-bottom: 1.5rem;
+
+    @media (min-width: variables.$breakpoint-desktop) {
+        max-width: 40.625rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title {
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: 0.0625rem;
+        color: variables.$color-black;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+        border-bottom: 0.1875rem solid variables.$color-tertiary;
+        padding-bottom: 0.375rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+// Animation en cascade à l'apparition de chaque plat
+@keyframes dish-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(1.25rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dish {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.875rem 1rem;
+    background-color: variables.$color-white-pure;
+    border-radius: 0.9375rem;
+    opacity: 0;
+    animation: dish-fade-in 0.5s ease-out forwards;
+    cursor: pointer;
+
+
+    @for $i from 1 through 12 {
+        &:nth-child(#{$i}) {
+            animation-delay: #{$i * 0.1}s;
+        }
+    }
+
+    &__info {
+        min-width: 0;
+        flex: 1;
+    }
+
+    &__name,
+    &__description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__name {
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: variables.$color-black;
+    }
+
+    &__description {
+        font-size: 0.9375rem;
+        font-weight: 300;
+        color: variables.$color-black;
+    }
+
+    &__price {
+        flex-shrink: 0;
+        font-size: 0.9375rem;
+        font-weight: 700;
+        color: variables.$color-black;
+    }
+
+    @media (min-width: variables.$breakpoint-desktop) {
+        &__name,
+        &__description {
+            white-space: normal;
+        }
+    }
+}
+
+.menu__button {
+    display: block;
+    margin: 2rem auto 0;
+}

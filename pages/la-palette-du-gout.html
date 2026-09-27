@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ohmyfood - La palette du goût</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+    
+
+    <header class="header header--menu">
+        <a href="../index.html" class="header__back" aria-label="Retour à l'accueil">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        </a>
+        <img src="../assets/images/logo/ohmyfood@2x.svg" alt="ohmyfood" class="header__logo" />
+    </header>
+
+
+    <main class="menu-page">
+        <div class="menu-page__hero">
+            <img src="../assets/images/restaurants/la-palette-du-gout.jpg" alt="Plat du restaurant La palette du goût" class="menu-page__hero-image"/>
+        </div>
+
+        <section class="menu-card">
+             <div class="menu-card__title-row">
+                <h1 class="menu-card__title">La palette du goût</h1>
+                <span class="menu-card__heart" aria-label="Ajouter aux favoris">
+                    <i class="fa-regular fa-heart menu-card__heart-outline" aria-hidden="true"></i>
+                    <i class="fa-solid fa-heart menu-card__heart-fill" aria-hidden="true"></i>
+                </span>
+            </div>
+
+             <div class="menu-category">
+                <h2 class="menu-category__title">Entrées</h2>
+                <ul class="menu-category__list">
+                    <li class="dish">
+                        <div class="dish__info">
+                            <p class="dish__name">Fricassée d'escargots</p>
+                            <p class="dish__description">Au piment d'Espelette</p>
+                        </div>
+                        <span class="dish__price">25&euro;</span>
+                    </li>
+                    <li class="dish">
+                        <div class="dish__info">
+                            <p class="dish__name">Foie gras de canard mi-cuit</p>
+                            <p class="dish__description">Et ses copeaux de truffe noire</p>
+                        </div>
+                        <span class="dish__price">35&euro;</span>
+                    </li>
+                    <li class="dish">
+                        <div class="dish__info">
+                            <p class="dish__name">Œuf au plat</p>
+                            <p class="dish__description">Assaisonné à la truffe sur lit de caviar</p>
+                        </div>
+                        <span class="dish__price">20&euro;</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-category">
+                <h2 class="menu-category__title">Plats</h2>
+                <ul class="menu-category__list">
+                    <li class="dish">
+                        <div class="dish__info">
+                            <p class="dish__name">Filet de bœuf aux herbes</p>
+                            <p class="dish__description">Accompagné de sa ribambelle de légumes</p>
+                        </div>
+                        <span class="dish__price">40&euro;</span>
+                    </li>
+                    <li class="dish">
+                        <div class="dish__info">
+                            <p class="dish__name">Parmentier de queue de bœuf</p>
+                            <p class="dish__description">À la truffe noire sur sa purée de panais</p>
+                        </div>
+                        <span class="dish__price">35&euro;</span>
+                    </li>
+                    <li class="dish">
+                        <div class="dish__info">
+                            <p class="dish__name">Filet de turbot</p>
+                            <p class="dish__description">Aux agrumes</p>
+                        </div>
+                        <span class="dish__price">44&euro;</span>
+                    </li>
+                </ul>
+            </div> 
+
+             <div class="menu-category">
+                <h2 class="menu-category__title">Desserts</h2>
+                <ul class="menu-category__list">
+                    <li class="dish">
+                        <div class="dish__info">
+                            <p class="dish__name">Paris-Brest</p>
+                            <p class="dish__description">Revisité</p>
+                        </div>
+                        <span class="dish__price">18&euro;</span>
+                    </li>
+                    <li class="dish">
+                        <div class="dish__info">
+                            <p class="dish__name">Macaron au chocolat d'exception</p>
+                            <p class="dish__description">Et glace à la vanille de Madagascar</p>
+                        </div>
+                        <span class="dish__price">22&euro;</span>
+                    </li>
+                    <li class="dish">
+                        <div class="dish__info">
+                            <p class="dish__name">Mousse au chocolat</p>
+                            <p class="dish__description">Au piment d'Espelette et à la truffe noire</p>
+                        </div>
+                        <span class="dish__price">23&euro;</span>
+                    </li>
+                </ul>
+            </div>
+ 
+            <button type="button" class="btn-primary menu__button">Commander</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img src="../assets/images/logo/ohmyfood@2x.svg" alt="ohmyfood" class="footer__logo" />
+        <ul class="footer__list">
+            <li class="footer__item">
+                <i class="fa-solid fa-utensils footer__icon" aria-hidden="true"></i>
+                <a href="#" class="footer__link">Proposer un restaurant</a>
+            </li>
+ 
+            <li class="footer__item">
+                <i class="fa-solid fa-handshake footer__icon" aria-hidden="true"></i>
+                <a href="#" class="footer__link">Devenir partenaire</a>
+            </li>
+ 
+            <li class="footer__item">
+                <a href="#" class="footer__link">Mentions légales</a>
+            </li>
+ 
+            <li class="footer__item">
+                <a href="#" class="footer__link">Contact</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

@@ -2,27 +2,27 @@
 
 .intro {
     text-align: center;
-    padding: 40px 24px 60px;
+    padding: 2.5rem 1.5rem 3.75rem;
     background-color: variables.$color-grey-lightt;
 
     &__title {
         font-family: variables.$font-text;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 1.5rem;
         color: variables.$color-black;
-        max-width: 280px;
-        margin: 0 auto 16px;
+        max-width: 17.5rem;
+        margin: 0 auto 1rem;
 
         @media (min-width: variables.$breakpoint-desktop) {
-        font-size: 40px;
+        font-size: 2.5rem;
         max-width: none;
         }
 
     }
 
     &__description {
-        font-size: 18px;
+        font-size: 1.125rem;
         color: variables.$color-grey;
-        margin-bottom: 24px;
+        margin-bottom: 1.5rem;
     }
 }
