@@ -1,6 +1,6 @@
 @use 'variables';
 
-// Header adapté aux pages restaurant : flèche retour + logo centré
+
 .header--menu {
     position: relative;
     justify-content: center;
@@ -35,7 +35,7 @@
     margin-top: -1.25rem;
     padding: 1.5rem 0.625rem 2.5rem;
     background-color: variables.$color-white;
-    border-radius: 1.875rem;
+    border-radius: 1.875rem 1.875rem 0 0;
 
     @media (min-width: variables.$breakpoint-desktop) {
         max-width: 81.25rem;
@@ -75,6 +75,7 @@
         height: 1.5rem;
         font-size: 1.5625rem;
         color: variables.$color-black;
+        cursor: pointer;
 
         @media (hover: hover) {
             &:hover .menu-card__heart-fill {
@@ -132,7 +133,6 @@
     }
 }
 
-// Animation en cascade à l'apparition de chaque plat
 @keyframes dish-fade-in {
     from {
         opacity: 0;
@@ -145,13 +145,15 @@
 }
 
 .dish {
+    position: relative;
     display: flex;
-    align-items: flex-end;
+    align-items: stretch;
     justify-content: space-between;
     gap: 0.75rem;
-    padding: 0.875rem 1rem;
     background-color: variables.$color-white-pure;
     border-radius: 0.9375rem;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1);
     opacity: 0;
     animation: dish-fade-in 0.5s ease-out forwards;
     cursor: pointer;
@@ -164,6 +166,10 @@
     }
 
     &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.875rem 0 0.875rem 1rem;
         min-width: 0;
         flex: 1;
     }
@@ -188,16 +194,54 @@
     }
 
     &__price {
+        display: flex;
+        align-items: flex-end;
+        padding: 0.875rem 1rem;
         flex-shrink: 0;
         font-size: 0.9375rem;
         font-weight: 700;
         color: variables.$color-black;
     }
 
-    @media (min-width: variables.$breakpoint-desktop) {
-        &__name,
-        &__description {
-            white-space: normal;
+    &__check {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: variables.$color-tertiary;
+        width: 3.6875rem;
+        margin-right: -3.6875rem;
+        transition: margin-right 0.4s ease-in-out;
+
+        i {
+            color: variables.$color-white-pure;
+            font-size: 1.25rem;
+            transform: rotate(180deg);
+            transition: transform 0.4s ease-in-out;
+        }
+    }
+
+    
+
+@media (hover: hover) {
+        &:hover {
+            .dish__check {
+                margin-right: 0;
+
+                i {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+
+    &:active,
+    &:focus {
+        .dish__check {
+            margin-right: 0;
+
+            i {
+                transform: rotate(0deg);
+            }
         }
     }
 }

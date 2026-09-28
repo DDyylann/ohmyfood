@@ -414,7 +414,7 @@ img {
   margin-top: -1.25rem;
   padding: 1.5rem 0.625rem 2.5rem;
   background-color: #F3F3F3;
-  border-radius: 1.875rem;
+  border-radius: 1.875rem 1.875rem 0 0;
 }
 @media (min-width: 1024px) {
   .menu-card {
@@ -455,6 +455,7 @@ img {
   height: 1.5rem;
   font-size: 1.5625rem;
   color: #000000;
+  cursor: pointer;
 }
 @media (hover: hover) {
   .menu-card__heart:hover .menu-card__heart-fill {
@@ -516,13 +517,15 @@ img {
   }
 }
 .dish {
+  position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: stretch;
   justify-content: space-between;
   gap: 0.75rem;
-  padding: 0.875rem 1rem;
   background-color: #FFFFFF;
   border-radius: 0.9375rem;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1);
   opacity: 0;
   animation: dish-fade-in 0.5s ease-out forwards;
   cursor: pointer;
@@ -564,6 +567,10 @@ img {
   animation-delay: 1.2s;
 }
 .dish__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.875rem 0 0.875rem 1rem;
   min-width: 0;
   flex: 1;
 }
@@ -583,15 +590,42 @@ img {
   color: #000000;
 }
 .dish__price {
+  display: flex;
+  align-items: flex-end;
+  padding: 0.875rem 1rem;
   flex-shrink: 0;
   font-size: 0.9375rem;
   font-weight: 700;
   color: #000000;
 }
-@media (min-width: 1024px) {
-  .dish__name, .dish__description {
-    white-space: normal;
+.dish__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  width: 3.6875rem;
+  margin-right: -3.6875rem;
+  transition: margin-right 0.4s ease-in-out;
+}
+.dish__check i {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  transform: rotate(180deg);
+  transition: transform 0.4s ease-in-out;
+}
+@media (hover: hover) {
+  .dish:hover .dish__check {
+    margin-right: 0;
   }
+  .dish:hover .dish__check i {
+    transform: rotate(0deg);
+  }
+}
+.dish:active .dish__check, .dish:focus .dish__check {
+  margin-right: 0;
+}
+.dish:active .dish__check i, .dish:focus .dish__check i {
+  transform: rotate(0deg);
 }
 
 .menu__button {
